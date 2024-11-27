@@ -8,32 +8,32 @@ import Link from 'next/link';
 
 function BlogCard({ src, subject, content, day, date }) {
     return (
-        <div className="card overflow-hidden rounded-none my-8 shadow-none">
+        <div className="shadow-none my-8 rounded-none overflow-hidden card">
             <div
                 color="transparent"
-                className="card-header m-0 rounded-none relative my-10"
+                className="relative m-0 my-10 rounded-none card-header"
             >
                 <div className='overflow-hidden'>
-                    <Image src={"/" + src} alt="blog-image" className='hover:scale-110 transition-all duration-[0.8s] w-full h-full' width={800} height={800} />
+                    <Image src={src} alt="blog-image" className='hover:scale-110 w-full h-full transition-all duration-[0.8s]' width={800} height={800} />
                 </div>
-                <div className='date flex flex-col items-center justify-center gap-1 bg-[#ffffff7a] absolute top-[15px] left-[10px] w-[70px] min-h-[70px]'>
-                    <span className='text-[30px] leading-4 text-center text-[#333]'>{day}</span>
-                    <span className='text-[12px] leading-7 text-center text-[#666]'>{date}</span>
+                <div className='top-[15px] left-[10px] absolute flex flex-col justify-center items-center gap-1 bg-[#ffffff7a] w-[70px] min-h-[70px] date'>
+                    <span className='text-[#333] text-[30px] text-center leading-4'>{day}</span>
+                    <span className='text-[#666] text-[12px] text-center leading-7'>{date}</span>
                 </div>
             </div>
-            <div className="card-body px-1">
-                <a href='#' className='hover:text-primary transition-all duration-300 text-[26px] leading-5 font-semibold text-[#333]'>{subject}</a>
-                <p variant="lead" color="gray" className="my-3 font-normal text-[16px] text-[#555]">{content}</p>
+            <div className="px-1 card-body">
+                <a href='#' className='font-semibold text-[#333] text-[26px] hover:text-primary leading-5 transition-all duration-300'>{subject}</a>
+                <p variant="lead" color="gray" className="my-3 font-normal text-[#555] text-[16px]">{content}</p>
             </div>
-            <div className="card-footer flex items-center justify-between px-1">
-                <div className="flex items-center space-x-2 text-[14px] text-[#555]">
+            <div className="flex justify-between items-center px-1 card-footer">
+                <div className="flex items-center space-x-2 text-[#555] text-[14px]">
                     <span className=''>BY: Admin </span>
                     <span>|</span>
                     <span>StreetStyle, Fashion, Couple</span>
                     <span>|</span>
                     <span>8 Comments</span>
                 </div>
-                <Link href='#' className='hover:text-primary transition-all duration-300 flex gap-2 items-center uppercase text-[14px]'>Continue Reading <FontAwesomeIcon icon={faArrowRight} className='text-[15px] w-[15px]' /></Link>
+                <Link href='#' className='flex items-center gap-2 text-[14px] hover:text-primary uppercase transition-all duration-300'>Continue Reading <FontAwesomeIcon icon={faArrowRight} className='w-[15px] text-[15px]' /></Link>
             </div>
         </div>
     )

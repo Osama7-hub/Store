@@ -2,19 +2,19 @@ export const featuredProducts = [
     {
         id: 1,
         title: "White Shirt With Pleat Detail Back",
-        src: "./images/product-min-01.jpg",
+        src: "/images/product-min-01.jpg",
         price: "$19.00"
     },
     {
         id: 2,
         title: "Converse All Star Hi Black Canvas",
-        src: "./images/product-min-02.jpg",
+        src: "/images/product-min-02.jpg",
         price: "$39.00"
     },
     {
         id: 3,
         title: "Nixon Porter Leather Watch In Tan",
-        src: "./images/product-min-03.jpg",
+        src: "/images/product-min-03.jpg",
         price: "$17.00"
     },
 ]

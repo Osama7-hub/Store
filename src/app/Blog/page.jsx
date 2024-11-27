@@ -16,21 +16,21 @@ function Blog() {
                 <div className="gap-4 lg:gap-8 grid grid-cols-1 xl:grid-cols-3 mt-10">
                     <div className="lg:col-span-2 sm:pr-0 lg:pr-28">
                         <BlogCard
-                            src={"./images/blog-01.webp"}
+                            src={"/images/blog-01.webp"}
                             subject={"8 Inspiring Ways to Wear Dresses in the Winter"}
                             content={"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius"}
                             day={22}
                             date={"Jan 2018"}
                         />
                         <BlogCard
-                            src={"./images/blog-02.webp"}
+                            src={"/images/blog-02.webp"}
                             subject={"The Great Big List of Men’s Gifts for the Holidays"}
                             content={"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius"}
                             day={18}
                             date={"Jan 2018"}
                         />
                         <BlogCard
-                            src={"./images/blog-03.webp"}
+                            src={"/images/blog-03.webp"}
                             subject={"5 Winter-to-Spring Fashion Trends to Try Now"}
                             content={"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius"}
                             day={16}
@@ -54,7 +54,7 @@ function Blog() {
                                             return (
                                                 <li className='flex items-start gap-7 my-5' key={featProduct.id}>
                                                     <div>
-                                                        <Image src={"/" + featProduct.src} alt="PRODUCT" className="w-full h-full" width={300} height={300} />
+                                                        <Image src={featProduct.src} alt="PRODUCT" className="w-full h-full" width={300} height={300} />
                                                     </div>
                                                     <div className='flex flex-col gap-3 p-2'>
                                                         <h6 className='font-medium text-[#333] hover:text-primary transition cursor-pointer'>{featProduct.title}</h6>
