@@ -8,21 +8,21 @@ const callouts = [
   {
     name: 'Desk and Office',
     description: 'Work from home accessories',
-    imageSrc: './images/blog-01.webp',
+    imageSrc: '/images/blog-01.webp',
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'Self-Improvement',
     description: 'Journals and note-taking',
-    imageSrc: './images/blog-02.webp',
+    imageSrc: '/images/blog-02.webp',
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'Travel',
     description: 'Daily commute essentials',
-    imageSrc: './images/blog-03.webp',
+    imageSrc: '/images/blog-03.webp',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
@@ -40,7 +40,7 @@ export default function BlogList() {
               <div className='rounded-lg overflow-hidden'>
                 <Image
                   alt={callout.imageAlt}
-                  src={"/" + callout.imageSrc}
+                  src={callout.imageSrc}
                   width={400}
                   height={400}
                   className="group-hover:scale-110 rounded-lg w-full max-sm:h-80 transition-all duration-[0.8s] object-cover sm:aspect-[2/1] lg:aspect-square"
