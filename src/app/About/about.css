@@ -21,3 +21,9 @@
    height: 100%;
    border: 2px solid #ccc;
 }
+
+@media(max-width: 767px) {
+   .border-img1::before, .border-img2::before {
+      display: none;
+   }
+}

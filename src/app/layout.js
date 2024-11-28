@@ -26,21 +26,6 @@ export default function RootLayout({ children }) {
   const [cart, setCart] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false); // حالة لتحميل البيانات
 
-  // تحميل البيانات من LocalStorage عند التهيئة
-  // useEffect(() => {
-  //   const savedCart = localStorage.getItem("cart");
-
-  //   if (savedCart) {
-  //     try {
-  //       const parsedCart = JSON.parse(savedCart);
-  //       setCart(parsedCart);
-  //     } catch (error) {
-  //       console.error("Error parsing cart data:", error);
-  //       localStorage.removeItem("cart"); // تنظيف البيانات غير الصحيحة
-  //     }
-  //   }
-  // }, []);
-
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -65,7 +50,6 @@ export default function RootLayout({ children }) {
   }, [cart, isLoaded]);
 
   const addToCart = (product) => {
-    // setCart((prevCart) => [...prevCart, product]);
     console.log("Adding to cart:", product);
     setCart(oldCart => [...oldCart, product])
   }

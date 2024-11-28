@@ -25,9 +25,9 @@ function BlogCard({ src, subject, content, day, date }) {
                 <a href='#' className='font-semibold text-[#333] text-[26px] hover:text-primary leading-5 transition-all duration-300'>{subject}</a>
                 <p variant="lead" color="gray" className="my-3 font-normal text-[#555] text-[16px]">{content}</p>
             </div>
-            <div className="flex justify-between items-center px-1 card-footer">
+            <div className="flex flex-wrap justify-between items-center gap-2 px-1 card-footer">
                 <div className="flex items-center space-x-2 text-[#555] text-[14px]">
-                    <span className=''>BY: Admin </span>
+                    <span>BY: Admin </span>
                     <span>|</span>
                     <span>StreetStyle, Fashion, Couple</span>
                     <span>|</span>
