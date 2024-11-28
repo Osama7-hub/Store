@@ -1,12 +1,11 @@
 "use client"
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname } from "next/navigation";
 import { getProductByCategories, getProductById } from '@/app/_utils/fetchAPI';
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
 import ProductBanner from './components/ProductBanner';
 import ProductInfo from './components/ProductInfo';
 import ProductList from '../../components/ProductSection/ProductList'
-import Image from 'next/image';
 import SkeletonSimilarProduct from './components/SkeletonSimilarProduct';
 
 function productDetails({ params }) {
@@ -61,42 +60,6 @@ function productDetails({ params }) {
     )
   }
 
-  const reviews = () => {
-    // const arrReviews = JSON.stringify(productDetails.reviews)
-    // const propertyNames = Object.keys(productDetails.reviews)
-    // const entries = Object.entries(productDetails.reviews)
-    // const arrayOfObjects = Object.values(productDetails);
-    return (
-      <div className='sm:mx-[15px] pb-[30px]'>
-        {
-          productDetails?.reviews ?
-            productDetails?.reviews.map(review => {
-              <div className='flex flex-wrap flex-t pb-[68px]'>
-                <div className='block mt-[6px] mr-[18px] rounded-[50%] w-[60px] h-[60px] overflow-hidden'>
-                  <Image
-                    src="/images/avatar-01.jpg"
-                    alt="avatar"
-                    className="rounded-full w-full aspect-square"
-                    width={500}
-                    height={500}
-                  />
-                </div>
-                <div style={{ width: "calc(100% - 78px)" }}>
-                  <div className='flex flex-wrap justify-between items-center pb-[17px]'>
-                    <span className='pr-[20px] text-[#333] text-[16px] leading-[1.625]'>{review?.reviewerName}</span>
-                    <span className='text-[18px] text-primary'>{review?.rating}</span>
-                  </div>
-                  <p className='text-[14px] leading-[1.7] text[#888]'>{review?.comment}</p>
-                </div>
-              </div>
-            })
-            : <div>No Reviews Yet</div>
-        }
-      </div>
-    )
-
-  }
-
   const tabs = [
     {
       label: "Description",
@@ -112,10 +75,6 @@ function productDetails({ params }) {
       label: "Additional information",
       content: additionalInfo()
     },
-    // {
-    //   label: "Reviews",
-    //   content: reviews()
-    // },
   ];
 
   return (

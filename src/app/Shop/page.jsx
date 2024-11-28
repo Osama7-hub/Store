@@ -3,12 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation';
 import BreadCrumb from '../components/BreadCrumb/BreadCrumb'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleUp, faArrowDown, faArrowUp, faChevronLeft, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { getAllCategories, getAllProducts, getAllProductsPerPages, getProductByCategories } from '../_utils/fetchAPI';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import ProductListShop from './ProductListShop';
-import { menuSort } from './data';
-import ProductList from '../components/ProductSection/ProductList';
 
 function Shop() {
     const path = usePathname();
@@ -28,7 +25,6 @@ function Shop() {
     const [totalProducts, setTotalProducts] = useState(0); // إجمالي عدد المنتجات
 
     const totalPages = Math.ceil(totalProducts / productsPerPage); // حساب عدد الصفحات
-
 
     useEffect(() => {
         getAllProducts_();
