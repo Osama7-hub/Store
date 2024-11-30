@@ -31,7 +31,7 @@ function Hero() {
                                             <div className="sm:opacity-0 lg:opacity-100 rounded-lg w-44 h-64 overflow-hidden">
                                                 <Image
                                                     alt="banner img"
-                                                    src="/images/hero-img-01.jpg"
+                                                    src="/images/hero-img-01.webp"
                                                     className="object-cover size-full"
                                                     width={400}
                                                     height={400}
@@ -40,36 +40,7 @@ function Hero() {
                                             <div className="rounded-lg w-44 h-64 overflow-hidden">
                                                 <Image
                                                     alt="banner img"
-                                                    src="/images/hero-img-02.jpg"
-                                                    className="object-cover size-full"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="gap-y-6 lg:gap-y-8 grid grid-cols-1 shrink-0">
-                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
-                                                <Image
-                                                    alt="banner img"
-                                                    src="/images/hero-img-03.jpg"
-                                                    className="object-cover size-full"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
-                                                <Image
-                                                    alt="banner img"
-                                                    src="/images/hero-img-04.jpg"
-                                                    className="object-cover size-full"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
-                                                <Image
-                                                    alt="banner img"
-                                                    src="/images/hero-img-05.jpg"
+                                                    src="/images/hero-img-02.webp"
                                                     className="object-cover size-full"
                                                     width={400}
                                                     height={400}
@@ -80,7 +51,7 @@ function Hero() {
                                             <div className="rounded-lg w-44 h-64 overflow-hidden">
                                                 <Image
                                                     alt="banner img"
-                                                    src="/images/hero-img-06.jpg"
+                                                    src="/images/hero-img-03.webp"
                                                     className="object-cover size-full"
                                                     width={400}
                                                     height={400}
@@ -89,7 +60,36 @@ function Hero() {
                                             <div className="rounded-lg w-44 h-64 overflow-hidden">
                                                 <Image
                                                     alt="banner img"
-                                                    src="/images/hero-img-07.jpg"
+                                                    src="/images/hero-img-04.webp"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-05.webp"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="gap-y-6 lg:gap-y-8 grid grid-cols-1 shrink-0">
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-06.webp"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-07.webp"
                                                     className="object-cover size-full"
                                                     width={400}
                                                     height={400}

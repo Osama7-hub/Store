@@ -9,13 +9,9 @@ import ProductList from './ProductList';
 
 function ProductSection() {
     const [productList, setProductList] = useState([])
-    const [categories, setCategories] = useState([])
-    const [productByCategoy, setProductByCategoy] = useState([])
-    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         getLatestProducts();
-        // getAllCategories_();
     }, [])
 
     const getLatestProducts = async () => {

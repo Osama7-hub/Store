@@ -30,7 +30,7 @@ const callouts = [
 
 export default function BlogList() {
   return (
-    <div className="mx-auto mb-24 px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div className="mx-auto mb-24 px-2 sm:px-4 lg:px-0 max-w-7xl">
       <div className="mx-auto max-w-2xl lg:max-w-none">
         <h2 className="mb-10 font-bold text-4xl text-gray-900 uppercase tracking-tight">Leatest Blogs</h2>
 

@@ -56,7 +56,7 @@ function ProductList({ productList }) {
                 <div className="flex justify-between mt-4">
                   <div>
                     <h3 className="w-fit text-gray-700 text-sm">
-                      <Link href={`/product-details/${product.id}`} className='font-semibold text-primary'>
+                      <Link href={`/product-details/${product.id}`} className="font-semibold text-primary">
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.title}
                       </Link>
@@ -70,35 +70,6 @@ function ProductList({ productList }) {
           ))
         }
       </Swiper >
-      // <div className="gap-x-6 gap-y-10 xl:gap-x-8 mt-6">
-      //   {
-      //     productList.map((product) => (
-      //       <div key={product.id} className="relative group">
-      //         <div className='overflow-hidden'>
-      //           <Image
-      //             src={product.thumbnail}
-      //             alt={product.title}
-      //             className="group-hover:scale-110 bg-gray-200 rounded-md w-full lg:h-80 transition duration-[0.5s] aspect-square object-cover lg:aspect-auto"
-      //             width={500}
-      //             height={500}
-      //           />
-      //         </div>
-      //         <div className="flex justify-between mt-4">
-      //           <div>
-      //             <h3 className="text-gray-700 text-sm">
-      //               <Link href={`/product-details/${product.id}`} className='font-semibold text-primary'>
-      //                 <span aria-hidden="true" className="absolute inset-0" />
-      //                 {product.title}
-      //               </Link>
-      //             </h3>
-      //             <p className="mt-1 text-gray-500 text-sm">{product.category}</p>
-      //           </div>
-      //           <p className="font-medium text-gray-900 text-sm">${product.price}</p>
-      //         </div>
-      //       </div>
-      //     ))
-      //   }
-      // </div>
     )
   }
 }

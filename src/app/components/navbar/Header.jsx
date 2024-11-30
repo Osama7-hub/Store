@@ -6,7 +6,7 @@ import {
     PopoverGroup,
 } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCartShopping, faMagnifyingGlass, faStore, faX } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCartShopping, faMagnifyingGlass, faStore, faUser, faX } from '@fortawesome/free-solid-svg-icons'
 import Cart from '../Cart/Cart'
 import Link from 'next/link'
 import { navLinks } from "./data"
@@ -48,7 +48,7 @@ function Header() {
                 </PopoverGroup>
                 <div className="lg:flex lg:flex-1 lg:justify-end gap-8 hidden">
                     <button className="font-semibold text-gray-900 text-sm/6 hover:text-primary">
-                        <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[24px]' />
+                        <FontAwesomeIcon icon={faUser} className='text-[24px]' />
                     </button>
                     <button onClick={() => setOpenCart(true)} className='relative z-50 flex gap-1 bg-inherit hover:bg-inherit text-blue-gray-600 hover:text-primary dark:text-blue-gray-100'>
                         <FontAwesomeIcon icon={faCartShopping} className='text-[24px]' />
@@ -83,15 +83,12 @@ function Header() {
                             </div>
                             <div className="flex justify-center items-center gap-10 py-6">
                                 <button className="font-semibold text-gray-900 text-sm/6 hover:text-primary">
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[24px]' />
+                                    <FontAwesomeIcon icon={faUser} className='text-[24px]' />
                                 </button>
                                 <button onClick={() => setOpenCart(true)} className='relative z-50 flex gap-1 bg-inherit hover:bg-inherit text-blue-gray-600 hover:text-primary dark:text-blue-gray-100'>
                                     <FontAwesomeIcon icon={faCartShopping} className='text-[24px]' />
                                     <span className='-top-3 -right-3 absolute border-[1px] border-gray-900 bg-primary rounded-full w-[18px] h-[18px] font-semibold text-[12px] text-white leading-[18px]'>{cart?.length}</span>
                                 </button>
-                                {/* <button className="font-semibold text-gray-900 text-sm/6 hover:text-primary">
-                                    <FontAwesomeIcon icon={faCartShopping} className='text-[24px]' />
-                                </button> */}
                             </div>
                         </div>
                     </div>
