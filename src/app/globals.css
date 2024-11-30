@@ -8,6 +8,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #717fe0;
+  /* --primary: #326b5c; */
+  /* --primary: #fe3442; */
 }
 
 @media (prefers-color-scheme: dark) {

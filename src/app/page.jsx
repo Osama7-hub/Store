@@ -7,7 +7,7 @@ import Stat from "./components/Stat/Stat";
 export default async function Home() {
   return (
     <>
-      <Hero />
+    <Hero />
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl lg:max-w-7xl">
         <Stat />
         <Category />

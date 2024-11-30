@@ -1,60 +1,115 @@
-"use client"
 import React from 'react'
-// Core modules imports are same as usual
-import { Pagination } from 'swiper/modules';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination } from "swiper";
-
-// // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "./slider.css";
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {mySlider} from "./data"
 
 function Hero() {
     return (
-        <div>
-            <Swiper
-                loop={true}
-                pagination={{
-                    dynamicBullets: true,
-                }}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
-                {mySlider.map((item) => {
-                    return (
-                        <SwiperSlide key={item.link} className="relative hero-swiper parent-slider">
-                            <Image src={item.link} width={10000} height={1000} alt="Swapper-Image" className="lg:!object-top md:mt-0 w-full h-full md:!object-cover" priority={true} />
-                            <div className="top-1/4 sm:left-[2%] 2xl:left-[19%] xl:left-[10%] absolute bg-transparent shadow-none border-none h-1/2 text-left">
-                                <div className='mx-auto leading-9 CardBody container'>
-                                    <h5 className="mb-2 font-normal text-[#222] sm:text-2xl md:text-5xl uppercase">Lifestyle Collection</h5>
-                                    <h2 className="mb-2 font-bold text-primary uppercase">{item.text}</h2>
-                                    <div className='flex gap-4'>
-                                        <h4 className='mb-2 text-[#222] sm:text-2xl md:text-4xl uppercase'>Sale Up To</h4>
-                                        <h4 className="mb-2 text-primary sm:text-2xl md:text-4xl uppercase">30% Off</h4>
+        <div className="relative bg-gray-100 overflow-hidden">
+            <div className="pt-16 sm:pt-24 lg:pt-40 pb-80 sm:pb-40 lg:pb-48">
+                <div className="relative sm:static mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                    <div className="sm:max-w-lg">
+                        <h1 className="font-bold text-4xl text-gray-900 sm:text-6xl tracking-tight">
+                            Summer styles are finally here
+                        </h1>
+                        <p className="mt-4 text-gray-500 text-xl">
+                            This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
+                            if you live or die.
+                        </p>
+                    </div>
+                    <div>
+                        <div className="mt-10">
+                            {/* Decorative image grid */}
+                            <div
+                                aria-hidden="true"
+                                className="lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl pointer-events-none"
+                            >
+                                <div className="sm:top-0 lg:top-1/2 sm:left-1/2 lg:left-1/2 absolute transform sm:translate-x-8 lg:-translate-y-1/2 lg:translate-x-8">
+                                    <div className="flex items-center space-x-6 lg:space-x-8">
+                                        <div className="gap-y-6 lg:gap-y-8 grid grid-cols-1 shrink-0">
+                                            <div className="sm:opacity-0 lg:opacity-100 rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-01.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-02.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="gap-y-6 lg:gap-y-8 grid grid-cols-1 shrink-0">
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-03.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-04.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-05.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="gap-y-6 lg:gap-y-8 grid grid-cols-1 shrink-0">
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-06.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                            <div className="rounded-lg w-44 h-64 overflow-hidden">
+                                                <Image
+                                                    alt="banner img"
+                                                    src="/images/hero-img-07.jpg"
+                                                    className="object-cover size-full"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h5 className="mb-2 font-normal text-[#222] text-md uppercase">Get Free Shipping on orders over $99.00</h5>
-                                </div>
-                                <div className="pt-0 CardFooter">
-                                    <Link href="/Shop" className="inline-block">
-                                        <button className="flex items-center gap-2 bg-primary hover:bg-black mt-5 px-5 p-2 rounded-[6px] text-white uppercase transition">
-                                            Shop Now
-                                            <FontAwesomeIcon icon={faArrowRight} className='w-[15px] text-[15px]' />
-                                        </button>
-                                    </Link>
                                 </div>
                             </div>
-                        </SwiperSlide>
-                    );
-                })}
-            </Swiper>
+
+                            <Link
+                                href="/Shop"
+                                className="flex items-center gap-2 bg-primary hover:bg-[#222] px-8 py-3 border border-transparent rounded-md w-fit font-medium text-center text-white group"
+                            >
+                                Shop Collection <FontAwesomeIcon icon={faArrowRight} className='w-[15px] text-[15px] transition group-hover:translate-x-2' />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
